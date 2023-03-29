@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+}
+html {
+    height:100%;
+  }
+  
+  body {
+    margin:0;
+  }
+  
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #d3c7fe 50%, rgba(37, 158, 238, 0.44) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  .content {
+    background-color:rgba(255,255,255,.8);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    left:50%;
+    padding:10vmin;
+    position:fixed;
+    text-align:center;
+    top:50%;
+    transform:translate(-50%, -50%);
+  }
+  
+  h1 {
+    font-family:monospace;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+.seleccion-menu {
+    width: 550px;
+    margin: 280px auto;
+}
+.sbtn_text{
+    font-size: 25px;
+}
+
+.seleccion-menu .seleccion-btn {
+display: flex;
+height: 55px;
+background: #d3c7fe;
+padding: 25px;
+color: #fff;
+font-size: 15px;
+font-weight: 600;
+text-transform: capitalize;
+border-radius: 15px;
+align-items: center;
+cursor: pointer;
+justify-content: space-between;
+box-shadow: 0 0 8px; color: rgb(0, 0, 0);
+}
+.seleccion-btn i{
+    font-size: 65px;
+    transition: .3s ease;
+}
+
+.seleccion-menu .opcion-texto{
+    position: relative;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 25px;
+    background: #eeebf4;
+    border: 3px solid #bfb2ed;
+    box-shadow: 0 0 80px; color: #d3c7fe;
+    transition: .3s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+.seleccion-menu.active .opcion-texto{
+    visibility: visible;
+    opacity: 1;
+}
+.opcion-texto {
+    display: flex;
+
+    height: 35px;
+    cursor: pointer;
+    padding: 0 20px;
+    border-radius: 250px;
+    align-items: center;
+    background: #eeebf4;
+    transition: .5s ease;
+}
+.opcion-texto:hover{
+    background: #cfc5f3;
+}
+.opcion-texto i{
+    font-size: 30px;
+    margin-right: 12px;
+} 
+.opcion_texto{
+    font-size: 22px;
+    color: #231a42;
+}
